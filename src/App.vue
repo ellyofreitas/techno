@@ -1,28 +1,53 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view />
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue';
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld,
-  },
-};
-</script>
-
 <style>
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,700');
+
+body,
+h1,
+h2,
+ul,
+li,
+p {
+  padding: 0px;
+  margin: 0px;
+}
+
+ul {
+  list-style: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #1a1a1a 30%, #fff 30%);
+  font-family: 'Noto Serif', serif;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding: 0 80px;
+}
+
+@keyframes fadeInDown {
+  from {
+    transform: translate3D(0, 30px, 0);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translate3D(0, 0, 0);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #app {
+    padding: 0 10px;
+  }
 }
 </style>
